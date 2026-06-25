@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamilarasu - My Skills</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body { display: flex; height: 100vh; overflow: hidden; background-color: #ffffff; }
+
+        .sidebar { width: 250px;
+		background-color: #0a0a0a;
+		display: flex;
+		flex-direction: column; }
+
+        .logo-box { background-color: #ffcc00;
+		color: #0a0a0a; 
+		padding: 30px 20px;
+		margin-bottom: 20px;
+		position: relative; }
+
+        .logo-box h1 { font-size: 24px;
+		line-height: 1;
+		text-transform: uppercase; }
+        
+        nav ul { list-style: none; }
+
+        nav li { border-bottom: 1px solid #222; }
+
+        nav a { display: block; 
+
+		color: #999; 
+		text-decoration: none;
+		padding: 15px 20px;
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		transition: color 0.3s; }
+        	nav a:hover { color: #fff; }
+
+        .main-content {
+            flex-grow: 1; 
+            background-color: #ffffff; 
+            padding: 60px 80px;
+            overflow-y: auto; 
+        }
+
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px; 
+            max-width: 900px;
+            margin-top: 20px;
+        }
+
+        .skill-group h3 {
+            font-size: 22px;
+            color: #888;
+            font-weight: normal;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .bar-container { margin-bottom: 25px; }
+        
+        .bar-text {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+        
+        .bar-background {
+            width: 100%;
+            height: 6px;
+            background-color: #f0f0f0;
+        }
+        
+        .bar-fill {
+            height: 100%;
+            background-color: #b2e0df; 
+        }
+
+        .circles-wrapper {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .circle-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .circle-chart {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .circle-inner {
+            width: 88px;
+            height: 88px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .circle-label {
+            font-weight: bold;
+            font-size: 14px;
+            color: #222;
+        }
+
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            margin-bottom: 18px;
+            font-weight: bold;
+            font-size: 15px;
+            color: #222;
+            display: flex;
+            align-items: center;
+        }
+
+        .check-list li::before {
+            content: '✔'; 
+            color: #000;
+            margin-right: 15px;
+            font-size: 16px;
+        }
+
+        .plain-list {
+            list-style: none;
+        }
+
+        .plain-list li {
+            margin-bottom: 18px;
+            font-size: 15px;
+            color: #666;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 900px) {
+            .skills-grid {
+                grid-template-columns: 1fr; 
+
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo-box">
+            <h1>TAMILARASU<br></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homework.html">Home</a></li>
+                <li><a href="skills.html">My Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        
+        <div class="skills-grid">
+            
+            <div class="skill-group">
+                <h3>Professional skills</h3>
+                
+                <div class="bar-container">
+                    <div class="bar-text"><span>C</span><span>95%</span></div>
+                    <div class="bar-background"><div class="bar-fill" style="width: 95%;"></div></div>
+                </div>
+
+                <div class="bar-container">
+                    <div class="bar-text"><span>C++</span><span>75%</span></div>
+                    <div class="bar-background"><div class="bar-fill" style="width: 75%;"></div></div>
+                </div>
+
+                <div class="bar-container">
+                    <div class="bar-text"><span>JAVA</span><span>85%</span></div>
+                    <div class="bar-background"><div class="bar-fill" style="width: 85%;"></div></div>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <h3>Soft skills</h3>
+                <div class="circles-wrapper">
+                    
+                    <div class="circle-item">
+                        <div class="circle-chart" style="background: conic-gradient(#b2e0df 95%, #f0f0f0 0);">
+                            <div class="circle-inner">95%</div>
+                        </div>
+                        <span class="circle-label">Communication</span>
+                    </div>
+
+                    <div class="circle-item">
+                        <div class="circle-chart" style="background: conic-gradient(#b2e0df 92%, #f0f0f0 0);">
+                            <div class="circle-inner">92%</div>
+                        </div>
+                        <span class="circle-label">Time Management</span>
+                    </div>
+
+                    <div class="circle-item">
+                        <div class="circle-chart" style="background: conic-gradient(#b2e0df 90%, #f0f0f0 0);">
+                            <div class="circle-inner">90%</div>
+                        </div>
+                        <span class="circle-label">Leadership</span>
+                    </div>
+
+                </div>
+            </div>
+
+                        
+        </div>
+
+    </main>
+
+</body>
+</html>

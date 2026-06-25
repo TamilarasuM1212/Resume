@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>STUDENT DETAILS</title>
+    <link href="students.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="heading">Student Table</h1>
+    <div class="container">
+        
+        <div style="text-align:center" class="enterdetails">
+            <label>Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="dept">Department:</label><br>
+            <input type="text" id="dept" name="dept" required><br><br>
+                
+            <label>Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label>Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone"><br><br>
+            
+            <button type="button" id="saveBtn" onclick="saveStudent()">Submit</button>
+        </div>
+        
+        <div class="displaydetails">
+            <table id="studentTable" border="1" cellpadding="10">
+                <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+    
+<script>
+    var editRow = null;
+
+    function saveStudent() {
+        var name = document.getElementById("name").value;
+        var dept = document.getElementById("dept").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+
+        if(name == "" || dept == "" || email == "" || phone == "") {
+            alert("Enter all details");
+            return;
+        }
+
+        if(editRow == null) {
+            var table = document.getElementById("studentTable");
+            var row = table.insertRow();
+
+            row.insertCell(0).innerHTML = name;
+            row.insertCell(1).innerHTML = dept;
+            row.insertCell(2).innerHTML = email;
+            row.insertCell(3).innerHTML = phone;
+
+            row.insertCell(4).innerHTML =
+            "<button class='edit-btn' onclick='editStudent(this)'>Edit</button> " +
+            "<button class='delete-btn' onclick='deleteStudent(this)'>Delete</button>";
+        } 
+	
+	else {
+
+            editRow.cells[0].innerHTML = name;
+            editRow.cells[1].innerHTML = dept;
+            editRow.cells[2].innerHTML = email;
+            editRow.cells[3].innerHTML = phone;
+
+            editRow = null;
+            document.getElementById("saveBtn").innerHTML = "Submit";
+        }
+
+        clearData();
+    }
+
+    function editStudent(btn) {
+        editRow = btn.parentNode.parentNode;
+
+        document.getElementById("name").value = editRow.cells[0].innerHTML;
+        document.getElementById("dept").value = editRow.cells[1].innerHTML;
+        document.getElementById("email").value = editRow.cells[2].innerHTML;
+        document.getElementById("phone").value = editRow.cells[3].innerHTML;
+
+        document.getElementById("saveBtn").innerHTML = "Update";
+    }
+
+    function deleteStudent(btn) {
+        var row = btn.parentNode.parentNode;
+
+         {
+            row.remove();
+        }
+    }
+
+    function clearData() {
+        document.getElementById("name").value = "";
+        document.getElementById("dept").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+    }
+</script>
+
+</body>
+</html>

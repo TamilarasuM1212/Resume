@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+
+        body {
+            display: flex;
+            height: 100vh; 
+            overflow: hidden; 
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #0a0a0a; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-box {
+            background-color: #ffcc00;
+            color: #0a0a0a;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .logo-box h1 {
+            font-size: 24px;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none; 
+        }
+
+        nav li {
+            border-bottom: 1px solid #222; 
+        }
+
+        nav a {
+            display: block;
+            color: #999;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff; 
+
+        }
+
+        .main-content {
+            flex-grow: 1; 
+            
+            background-image: url('img2.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center top 40%;
+
+            background-color: #FFF7ED; 
+           /*background-size: cover; 
+            background-position: center top; */
+
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 60px;
+        }
+
+        .hero-text {
+            color:#F0B13B;
+            max-width: 600px;
+        }
+
+        .hero-text h2 {
+            font-size: 30px;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .hero-text p {
+            font-size: 10px;
+            color: #F0B13B;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text hr {
+            width: 50px;
+            border: none;
+            border-top: 2px solid #777;
+            margin-left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo-box">
+            <h1>TAMILARASU<br></h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+	        <li><a href="skills.html">My Skills</a></li>
+	        <li><a href="projects.html">My Projects</a></li>
+
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="hero-text">
+            <h2>Hello, I'm<br>Tamilarasu</h2>
+            <p>Computer Science Student / Fresher</p>
+            <hr>
+        </div>
+    </main>
+
+</body>
+</html>

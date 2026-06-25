@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamilarasu - Projects</title>
+    <style>
+        /* --- BASE STYLES (Kept consistent for your site) --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body { display: flex; height: 100vh; overflow: hidden; background-color: #f9fafc; } /* Slightly off-white background */
+
+        .sidebar { width: 250px; background-color: #0a0a0a; display: flex; flex-direction: column; flex-shrink: 0;}
+        .logo-box { background-color: #ffcc00; color: #0a0a0a; padding: 30px 20px; margin-bottom: 20px; position: relative; }
+        .logo-box h1 { font-size: 24px; line-height: 1; text-transform: uppercase; }
+        
+        nav ul { list-style: none; }
+        nav li { border-bottom: 1px solid #222; }
+        nav a { display: block; color: #999; text-decoration: none; padding: 15px 20px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
+        nav a:hover { color: #fff; }
+
+        .main-content {
+            flex-grow: 1; 
+            padding: 60px 80px;
+            overflow-y: auto; 
+        }
+
+        /* --- PAGE HEADER STYLES --- */
+        .page-title {
+            color: #222;
+            font-size: 32px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .page-subtitle {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        .page-title-hr {
+            width: 60px;
+            border: none;
+            border-top: 4px solid #ffcc00;
+            margin-bottom: 40px;
+        }
+
+        /* --- PROJECT GRID & CARDS STYLES --- */
+        .projects-grid {
+            display: grid;
+            /* This automatically creates responsive columns based on screen size */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px;
+            max-width: 1000px;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-top: 4px solid #ffcc00;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Hover animation */
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+        }
+
+        .project-card h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1; /* Pushes the links to the bottom */
+        }
+
+        /* Tech Tags */
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background-color: #f0f0f0;
+            color: #555;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Action Links */
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: auto; 
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: #0a0a0a;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 2px;
+            transition: border-color 0.3s, color 0.3s;
+        }
+
+        .project-link:hover {
+            color: #555;
+            border-bottom: 2px solid #ffcc00;
+        }
+
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo-box">
+            <h1>TAMILARASU<br></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homework.html">Home</a></li>
+                <li><a href="skills.html">My Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        
+        <h2 class="page-title">My Projects</h2>
+        <p class="page-subtitle">Academic & Personal Work</p>
+        <hr class="page-title-hr">
+
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <h3>Library Management System</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">SQLite</span>
+                </div>
+                <p>A comprehensive command-line application built to streamline library operations. It manages book inventories, tracks student borrowing records, and handles overdue fines using a relational database to ensure data integrity.</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">View Code &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Personal Portfolio Website</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <p>Designed and built a responsive personal portfolio from scratch without relying on external frameworks. Features include interactive CSS grids, dynamic hover states, and responsive layouts for mobile and desktop viewing.</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">View Code &rarr;</a>
+                    <a href="#" class="project-link">Live Demo &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Weather Forecast App</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">REST API</span>
+                </div>
+                <p>A web application that fetches real-time weather data from a public API. Users can search for any city globally to retrieve current temperatures, humidity levels, and a 5-day forecast presented in a clean UI.</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">View Code &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
